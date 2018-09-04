@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TipCalc
 //
-//  Created by Sierra Klix on 8/24/18.
+//  Created by Ryan McCommon on 8/24/18.
 //  Copyright © 2018 Ryan McCommon. All rights reserved.
 //
 
@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipPercentButton: UISegmentedControl!
     
+    @IBOutlet weak var tipSlider: UISlider!
+    @IBOutlet weak var tipPercentLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,14 +30,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calcTip(_ sender: Any) {
-        let tipPercents = [0.15,0.18,0.20]
+        let tipPercent = tipSlider.value
         let bill = Double(subInput.text!) ?? 0
-        let tip = bill*tipPercents[tipPercentButton.selectedSegmentIndex]
+        let tip = bill*Double(tipPercent)
         let total = bill + tip
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f",total)
     }
     
+    @IBAction func changePercent(_ sender: Any) {
+        let tipPercLabelNumber = Int(tipSlider.value*100)
+        tipPercentLabel.text = String("%\(tipPercLabelNumber)")
+        
+    }
 }
 
