@@ -1,6 +1,6 @@
-# Pre-work - *Name of App Here*
+# Pre-work - *Tip Slider*
 
-**Name of your app** is a tip calculator application for iOS.
+**Tip Slider** is a tip calculator application for iOS.
 
 Submitted by: Ryan McCommon
 
@@ -22,12 +22,12 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
-
+- [X] instead of a settings page to change the tip percentage I used a UIslider to adjust it.
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/nHPMTqN' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
